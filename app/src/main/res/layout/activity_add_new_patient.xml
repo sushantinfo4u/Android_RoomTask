@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    tools:context=".AddNewPatientActivity">
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_marginTop="40dp"
+        android:background="@drawable/border"
+        android:id="@+id/txtPatientName"
+        android:paddingStart="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/edtPatientName"
+            android:textAllCaps="false"
+            android:hint="Patient Name"
+            android:singleLine="true"
+            android:inputType="text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:paddingStart="5dp"
+        android:background="@drawable/border"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/txtPatientName"
+        android:id="@+id/txtUHID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:maxLength="5"
+            android:id="@+id/edtUHID"
+            android:hint="Enter UHID"
+            android:singleLine="true"
+            android:inputType="text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:id="@+id/mainLayout"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/txtUHID"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <EditText
+            android:gravity="center_horizontal"
+            android:maxLength="2"
+            android:inputType="number"
+            android:hint="Age"
+            android:id="@+id/edtAge"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+        <Spinner
+            android:entries="@array/array_name"
+            android:id="@+id/spnGender"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="50dp"/>
+
+    </LinearLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:paddingStart="5dp"
+        android:background="@drawable/border"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/mainLayout"
+        android:id="@+id/txtDOB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:focusable="false"
+            android:clickable="true"
+            android:editable="false"
+            android:id="@+id/edtDOB"
+            android:hint="DOB"
+            android:singleLine="true"
+            android:inputType="text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:background="@drawable/border"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/txtDOB"
+        android:id="@+id/txtAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/edtAddress"
+            android:hint="Address"
+            android:singleLine="true"
+            android:inputType="text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:paddingStart="5dp"
+        android:background="@drawable/border"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/txtAddress"
+        android:id="@+id/txtMobileNo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:maxLength="10"
+            android:id="@+id/edtMobileNo"
+            android:hint="Mobile"
+            android:singleLine="true"
+            android:inputType="number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:textColor="#FFFFFF"
+        android:background="@color/colorPrimary"
+        android:layout_marginTop="40dp"
+        android:layout_below="@+id/txtMobileNo"
+        android:id="@+id/btnSubmit"
+        android:text="Submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+</RelativeLayout>
